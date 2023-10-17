@@ -16,13 +16,18 @@ const Router = createBrowserRouter([
       {
         path: "/users",
         element: <Users />,
-        loader: () => fetch("http://localhost:4000/users"),
+        loader: () =>
+          fetch(
+            "https://users-server-site-jzeu5v5k1-brcshakil.vercel.app/users"
+          ),
       },
       {
         path: "/updateUser/:id",
         element: <UpdateUser />,
         loader: ({ params }) =>
-          fetch(`http://localhost:4000/users/${params.id}`),
+          fetch(
+            `https://users-server-site-jzeu5v5k1-brcshakil.vercel.app/users/${params.id}`
+          ),
       },
     ],
   },

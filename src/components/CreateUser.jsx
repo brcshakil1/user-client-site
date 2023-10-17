@@ -45,7 +45,7 @@ const CreateUser = () => {
     const email = form.email.value;
 
     const user = { name, email, gender, status };
-    fetch("http://localhost:4000/users", {
+    fetch("https://users-server-site-jzeu5v5k1-brcshakil.vercel.app/users", {
       method: "POST",
       headers: {
         "content-type": "application/json",

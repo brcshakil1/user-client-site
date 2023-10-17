@@ -61,13 +61,16 @@ const UpdateUser = () => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         // Swal.fire("Updated!", "", "success");
-        fetch(`http://localhost:4000/users/${loadedUser._id}`, {
-          method: "PUT",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(user),
-        })
+        fetch(
+          `https://users-server-site-jzeu5v5k1-brcshakil.vercel.app/users/${loadedUser._id}`,
+          {
+            method: "PUT",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(user),
+          }
+        )
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
